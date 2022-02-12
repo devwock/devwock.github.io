@@ -4,13 +4,11 @@ const pathPrefix = "/";
 const siteMetadata = {
   title: "Devwocky",
   shortName: "devwocky",
-  description:
-    "Twas brillig, and the slithy devs.",
-  twitterName: "devwock",
+  description: "Twas brillig, and the slithy devs.",
   imageUrl: "/graph-visualisation.jpg",
   siteUrl: "https://devwock.github.io",
 };
-const contentFolder = "foam";
+const contentFolder = "../foam";
 
 module.exports = {
   siteMetadata,
@@ -52,7 +50,8 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "content",
-        path: `${__dirname}/..`,
+        // path: `${__dirname}/..`,
+        path: path.resolve(`./${contentFolder}`),
         ignore: [`**/\.*/**/*`],
       },
     },
