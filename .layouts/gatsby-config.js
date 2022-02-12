@@ -37,14 +37,22 @@ module.exports = {
         ],
         editUrl:
           "https://github.com/devwock/devwock.github.io/tree/main/",
+        lastUpdatedTransformer: (isoString) => {
+          const dateObj = new Date(isoString);
+          const date = dateObj.toLocaleString("ko-KR", {
+            year: "numeric",
+            month: "numeric",
+            day: "numeric",
+          });
+          return date;
+        },
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "content",
-        //path: `${__dirname}/..`,
-        path: path.resolve(`./${contentFolder}`),
+        path: `${__dirname}/..`,
         ignore: [`**/\.*/**/*`],
       },
     },
