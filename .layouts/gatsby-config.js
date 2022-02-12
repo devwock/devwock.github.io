@@ -2,14 +2,16 @@ const path = require("path");
 const pathPrefix = "/";
 // Change me
 const siteMetadata = {
-  title: "Foam Template for Gatsby Theme Primer Wiki",
-  shortName: "Wiki",
+  title: "Devwocky",
+  shortName: "devwocky",
   description:
-    "Another Foam template that use gatsby-theme-primer-wiki, Welcome to your new Foam Knowledge Base!",
-  twitterName: "theowenyoung",
+    "Twas brillig, and the slithy devs.",
+  twitterName: "devwock",
   imageUrl: "/graph-visualisation.jpg",
-  siteUrl: "https://demo-foam.owenyoung.com",
+  siteUrl: "https://devwock.github.io",
 };
+const contentFolder = "foam";
+
 module.exports = {
   siteMetadata,
   pathPrefix,
@@ -26,22 +28,23 @@ module.exports = {
         nav: [
           {
             title: "Github",
-            url: "https://github.com/theowenyoung/foam-template-gatsby-theme-primer-wiki/",
+            url: "https://github.com/devwock/",
           },
           {
             title: "Twitter",
-            url: "https://twitter.com/theowenyoung",
+            url: "https://twitter.com/devwock",
           },
         ],
         editUrl:
-          "https://github.com/theowenyoung/foam-template-gatsby-theme-primer-wiki/tree/main/",
+          "https://github.com/devwock/devwock.github.io/tree/main/",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "content",
-        path: `${__dirname}/..`,
+        //path: `${__dirname}/..`,
+        path: path.resolve(`./${contentFolder}`),
         ignore: [`**/\.*/**/*`],
       },
     },
