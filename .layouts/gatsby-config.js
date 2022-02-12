@@ -1,6 +1,5 @@
 const path = require("path");
 const pathPrefix = "/";
-// Change me
 const siteMetadata = {
   title: "Devwocky",
   shortName: "devwocky",
@@ -19,22 +18,19 @@ module.exports = {
   plugins: [
     {
       resolve: "gatsby-theme-primer-wiki",
-      // Change me
       options: {
         icon: "./static/logo.png",
         sidebarComponents: ["latest", "tag"],
         nav: [
           {
+            title: "Latest",
+            url: "/latest/",
+          },
+          {
             title: "Github",
             url: "https://github.com/devwock/",
           },
-          {
-            title: "Twitter",
-            url: "https://twitter.com/devwock",
-          },
         ],
-        editUrl:
-          "https://github.com/devwock/devwock.github.io/tree/main/",
         lastUpdatedTransformer: (isoString) => {
           const dateObj = new Date(isoString);
           const date = dateObj.toLocaleString("ko-KR", {
@@ -44,6 +40,8 @@ module.exports = {
           });
           return date;
         },
+        editUrl:
+          "https://github.com/devwock/devwock.github.io/tree/main/",
       },
     },
     {
