@@ -36,6 +36,7 @@ module.exports = {
             url: "https://github.com/devwock/",
           },
         ],
+        shouldShowTagGroupsOnIndex: false,
         lastUpdatedTransformer: (isoString) => {
           const dateObj = new Date(isoString);
           const date = dateObj.toLocaleString("ko-KR", {
