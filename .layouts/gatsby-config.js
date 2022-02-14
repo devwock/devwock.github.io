@@ -2,7 +2,7 @@ const path = require("path");
 const pathPrefix = "/";
 const siteMetadata = {
   title: "Devwocky",
-  shortName: "devwocky",
+  shortName: "Devwocky",
   description: "Twas brillig, and the slithy devs.",
   imageUrl: "/graph-visualisation.jpg",
   siteUrl: "https://devwock.github.io",
@@ -26,6 +26,11 @@ module.exports = {
             title: "Latest",
             url: "/latest/",
           },
+          {
+            title: "About",
+            url: "/latest/",
+          },
+          
           {
             title: "Github",
             url: "https://github.com/devwock/",
