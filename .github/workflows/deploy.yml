@@ -12,6 +12,11 @@ jobs:
         with:
           fetch-depth: 0
           submodule: true
+      - run: |
+          pwd
+          ls -al
+          cd foam
+          ls -al
       - name: Setup | Node
         uses: actions/setup-node@v2
         with:
