@@ -20,17 +20,16 @@ module.exports = {
       resolve: "gatsby-theme-primer-wiki",
       options: {
         icon: "./static/logo.png",
-        sidebarComponents: ["latest", "tag"],
+        sidebarComponents: ["tag"], // "latest",
         nav: [
-          {
-            title: "Latest",
-            url: "/latest/",
-          },
-          {
-            title: "About",
-            url: "/latest/",
-          },
-          
+          // {
+          //   title: "Latest",
+          //   url: "/latest/",
+          // },
+          // {
+          //   title: "About",
+          //   url: "/latest/",
+          // },
           {
             title: "Github",
             url: "https://github.com/devwock/",
