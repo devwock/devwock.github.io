@@ -107,6 +107,10 @@ h1 {
   object-fit: cover;
 }
 
+.tile-image-under-construction {
+  filter: grayscale(100%);
+}
+
 .tile-copy {
   position: relative;
   z-index: 1;
